@@ -14,18 +14,12 @@ void setup() {
 void loop() {
   for (pos = 30; pos <= 150; pos += 1) { 
     servo1.write(pos);
-    // for (pos2 = 150; pos >= 30; pos2 -= 1){
-    //   servo2.write(pos2);   
-    // }
-    servo2.write(pos);              //need to reverse direction bc flipped
+    servo2.write(150 - pos);              //need to reverse direction bc flipped
     delay(15);                       
   }
   for (pos = 150; pos >= 30; pos -= 1) { 
     servo1.write(pos); 
-    // for (pos2 = 30; pos <= 150; pos2 += 1){
-    //   servo2.write(pos2);   
-    // }   
-    servo2.write(pos);                //need to reverse direction bc flipped
+    servo2.write(150 - pos);                //need to reverse direction bc flipped
     delay(15);                       
   }
 }
